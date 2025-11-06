@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Bot Starter</title>
+</head>
+<body>
+  <h1>Discord Bot Starter</h1>
+  <button id="startBtn">Start Bot</button>
+  <p id="status"></p>
+
+  <script>
+    const btn = document.getElementById('startBtn');
+    const status = document.getElementById('status');
+
+    btn.addEventListener('click', async () => {
+      status.textContent = 'Starte Bot...';
+      try {
+        const response = await fetch('/start-bot');
+        const text = await response.text();
+        status.textContent = text;
+      } catch (err) {
+        status.textContent = 'Fehler beim Starten';
+      }
+    });
+  </script>
+</body>
+</html>
