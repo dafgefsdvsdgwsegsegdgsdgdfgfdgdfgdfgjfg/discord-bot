@@ -15,7 +15,7 @@ app.get('/start-bot', async (req, res) => {
   bot.once('ready', () => console.log(`Bot angemeldet als ${bot.user.tag}`));
 
   try {
-    await bot.login('MTQxMzQzOTE1Njk4OTk4NDg2OA.GUKtDM.o4WOgQF-lgqcKvrLR1kaEoAEgoh2it7-RhAQtM');
+    await bot.login('MTQxMzQzOTE1Njk4OTk4NDg2OA.GbMhiH.LKvjSlUqNJVqirPFoUmrooS_KH6LtVZ7Ct3eEw');
     res.send('Bot gestartet!');
   } catch (err) {
     console.error(err);
@@ -24,3 +24,4 @@ app.get('/start-bot', async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server läuft auf http://localhost:${port}`));
+
